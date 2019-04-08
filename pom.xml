@@ -13,6 +13,7 @@
 		<module>eureka-server</module>
 		<module>eureka-provider</module>
 		<module>ribbon-consumer</module>
+		<module>feign-consumer</module>
 	</modules>
 
 	<groupId>jelly</groupId>
@@ -26,10 +27,17 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+		<spring-boot.version>2.1.4.RELEASE</spring-boot.version>
 	</properties>
 
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -64,7 +72,7 @@
             就会覆盖中央仓库的配置 -->
 			<id>mvnrepository</id>
 			<name>mvnrepository</name>
-			<url>http://www.mvnrepository.com/</url>
+			<url>https://mvnrepository.com/</url>
 			<layout>default</layout>
 			<releases>
 				<enabled>true</enabled>
