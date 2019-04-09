@@ -15,7 +15,10 @@
 		<module>ribbon-consumer</module>
 		<module>ribbon-consumer-hystrix-dashboard</module>
 		<module>feign-consumer</module>
-	</modules>
+		<module>zuul-service</module>
+		<module>zuul-filter</module>
+        <module>java-demo</module>
+    </modules>
 
 	<groupId>jelly</groupId>
 	<artifactId>spring-cloud-demo</artifactId>
