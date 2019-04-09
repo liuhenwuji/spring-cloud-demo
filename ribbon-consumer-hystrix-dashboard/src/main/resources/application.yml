@@ -2,14 +2,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-ribbon:
-  eureka:
-    enabled: true
 spring:
   application:
-    name: feign-consumer
+    name: ribbon-consumer-hystrix-dashboard
 server:
-  port: 9001
-feign:
-  hystrix:
-    enabled: true
+  port: 9002
+spring.main.allow-bean-definition-overriding: true
