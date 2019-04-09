@@ -18,7 +18,9 @@
 		<module>zuul-service</module>
 		<module>zuul-filter</module>
         <module>java-demo</module>
-    </modules>
+        <module>config-server</module>
+		<module>config-client</module>
+	</modules>
 
 	<groupId>jelly</groupId>
 	<artifactId>spring-cloud-demo</artifactId>
