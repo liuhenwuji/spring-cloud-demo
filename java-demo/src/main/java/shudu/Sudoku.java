@@ -1,4 +1,5 @@
-import java.lang.System.*;
+package shudu;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

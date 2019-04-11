@@ -1,3 +1,4 @@
+package shudu;
 
 import java.util.Random;
 
