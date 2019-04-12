@@ -16,6 +16,7 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,8 +47,18 @@ public class SearchService {
         searchRequest.source(sourceBuilder);
 
         SearchResponse searchResponse = client.search(searchRequest);
-        long totalHits = searchResponse.getHits().getTotalHits();
-        System.out.println(totalHits);
+        try {
+            SearchResponse response = client.search(searchRequest);
+            Arrays.stream(response.getHits().getHits())
+                    .forEach(i -> {
+                        System.out.println(i.getIndex());
+                        System.out.println(i.getSourceAsString());
+                        System.out.println(i.getType());
+                    });
+            System.out.println(response.getHits().totalHits);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
